@@ -11,8 +11,9 @@ jobs:
         with:
           repository: missionpeakus/mission-peak-e2e-tests  # Replace with the owner and name of the web repository
           path: master
-          token: ${{ github.token }} 
           ref: main
+          env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
          
           
