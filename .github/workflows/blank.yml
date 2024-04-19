@@ -10,9 +10,11 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: missionpeakus/mission-peak-e2e-tests  # Replace with the owner and name of the web repository
-          branch: main
-          path: master  # Specify the directory where the web repository should be checked out
-          github-token: ${{ github.token }} 
+          path: master
+          token: ${{ github.token }} 
+          ref: main
+    
+         
           
       - name: Install Dependencies for Web Repository
         run: npm install
