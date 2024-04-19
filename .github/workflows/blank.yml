@@ -9,7 +9,8 @@ jobs:
       - name: Checkout Web Repository
         uses: actions/checkout@v2
         with:
-          repository: missionpeakus/mission-peak-web@main # Replace with the owner and name of the web repository
+          repository: missionpeakus/mission-peak-web  # Replace with the owner and name of the web repository
+          branch: main
           path: mission-peak-web  # Specify the directory where the web repository should be checked out
           github-token: ${{ github.token }} 
           
