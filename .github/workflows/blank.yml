@@ -9,7 +9,7 @@ jobs:
       - name: Checkout Web Repository
         uses: actions/checkout@v2
         with:
-          repository: missionpeakus/mission-peak-web  # Replace with the owner and name of the web repository
+          repository: missionpeakus/mission-peak-web@main # Replace with the owner and name of the web repository
           path: mission-peak-web  # Specify the directory where the web repository should be checked out
 
       - name: Install Dependencies for Web Repository
