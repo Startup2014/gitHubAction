@@ -9,23 +9,14 @@ jobs:
       - name: Checkout Web Repository
         uses: actions/checkout@v2
         with:
-          repository: missionpeakus/mission-peak-web  # Replace with the owner and name of the web repository
+          repository: missionpeakus/mission-peak-e2e-tests  # Replace with the owner and name of the web repository
           branch: main
-          path: mission-peak-web  # Specify the directory where the web repository should be checked out
+          path: master  # Specify the directory where the web repository should be checked out
           github-token: ${{ github.token }} 
           
       - name: Install Dependencies for Web Repository
         run: npm install
-        working-directory: mission-peak-web  # Switch to the directory of the web repository
-
-      - name: Start Local Server for Web Repository
-        run: npm run start:dev  # Adjust the command to start the local server for the web repository
-
-      - name: Checkout Cypress Repository
-        uses: actions/checkout@v2
-
-      - name: Install Dependencies for Cypress Tests
-        run: npm install  # Adjust if needed based on your Cypress project setup
+        working-directory: master # Switch to the directory of the web repository
 
       - name: Run Cypress Tests
         run: npm run cypress:run -- --browser chrome   # Adjust the Cypress command based on your configuration
