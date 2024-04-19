@@ -11,7 +11,8 @@ jobs:
         with:
           repository: missionpeakus/mission-peak-web@main # Replace with the owner and name of the web repository
           path: mission-peak-web  # Specify the directory where the web repository should be checked out
-
+          github-token: ${{ github.token }} 
+          
       - name: Install Dependencies for Web Repository
         run: npm install
         working-directory: mission-peak-web  # Switch to the directory of the web repository
